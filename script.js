@@ -20,6 +20,11 @@ const addTodo = () => {
         return;
     } if (addBtn.value == "Edit") {
         editLocalTodo(edit.target.previousElementSibling.innerHTML)
+          if (todos.includes(inputBox)) {
+            alert('Already Addedd');
+
+            return false;
+        }
         edit.target.previousElementSibling.innerHTML = inputBox;
         addBtn.value = "Add";
         input.value = ""
